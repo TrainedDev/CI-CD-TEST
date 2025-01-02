@@ -9,7 +9,9 @@ beforeAll((done) => {
   server.listen(3001, done);
 });
 
-afterAll((done) => server.close(done));
+afterAll(done => {
+    server.close(done);
+});
 
 describe("Testing All Server API's", () => {
   beforeEach(() => jest.clearAllMocks());
